@@ -15,6 +15,7 @@
 
       //3rd party modules
       'common.toastr',
+      'firebase',
 
       //my modules
       'blocks.data',
