@@ -1,0 +1,18 @@
+<h1>test page</h1>
+<p>{{vm.testVariable}}</p>
+
+<ul>
+  <li ng-repeat="(postId,post) in vm.posts">
+    {{postId}} {{post.title}}
+    <a ng-href="{{post.url}}">{{post.url}}</a>
+    <button ng-click="vm.deletePost(postId)">delete</button>
+    <button ng-click="vm.editPost(postId)">edit</button>
+  </li>
+</ul>
+
+
+<form ng-submit="vm.savePost()">
+  <input type="text" ng-model="vm.post.title"/>
+  <input type="text" ng-model="vm.post.url"/>
+  <input type="submit" value="submit"/>
+</form>
